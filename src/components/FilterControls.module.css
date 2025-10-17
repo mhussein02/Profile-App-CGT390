@@ -1,0 +1,26 @@
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0;
+}
+.controls select,
+.controls input {
+  padding: 8px 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+.controls button {
+  padding: 8px 12px;
+  border: 1px solid #9a9a9a;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+}
+.controls button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}

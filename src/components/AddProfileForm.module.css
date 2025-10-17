@@ -1,0 +1,73 @@
+.form {
+  border: 1px solid rgba(150,150,150,0.25);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0 24px;
+  background: rgba(255,255,255,0.9);
+}
+.heading {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+.input {
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+.textarea {
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  min-height: 96px;
+  resize: vertical;
+  background: transparent;
+  color: inherit;
+}
+.invalid {
+  border-color: #d33;
+  outline: none;
+}
+.error {
+  color: #b00020;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+.submit {
+  padding: 10px 14px;
+  border: 1px solid #9a9a9a;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+}
+.submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.success {
+  font-size: 13px;
+  color: #0b8f2a;
+}
+:global(.dark) .form {
+  background: rgba(20,22,27,0.8);
+  border-color: rgba(255,255,255,0.08);
+}

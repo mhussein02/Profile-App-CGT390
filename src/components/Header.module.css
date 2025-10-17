@@ -1,0 +1,45 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(180%) blur(8px);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.links {
+  display: flex;
+  gap: 14px;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.8;
+}
+.active {
+  text-decoration: none;
+  color: inherit;
+  opacity: 1;
+  font-weight: 600;
+}
+.modeBtn {
+  border: 1px solid #999;
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.modeBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}

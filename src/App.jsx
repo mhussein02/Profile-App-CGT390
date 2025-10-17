@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import appStyles from "./App.module.css";
+import { useMode } from "./context/ModeContext.jsx";
+import Home from "./pages/Home.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
+const AddProfile = lazy(() => import("./pages/AddProfile.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+const FetchedProfiles = lazy(() => import("./pages/FetchedProfiles.jsx"));
+const ProfileDetail = lazy(() => import("./pages/ProfileDetail.jsx"));
+const NotFound = lazy(() => import("./pages/NotFound.jsx"));
+
+export default function App() {
+  const { mode, toggleMode } = useMode();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={`${appStyles.app} ${mode === "light" ? appStyles.light : appStyles.dark}`}>
+      <Header mode={mode} onToggleMode={toggleMode} />
+      <div className={appStyles.container}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/add" element={<AddProfile />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/fetched-profiles" element={<FetchedProfiles />}>
+              <Route path="profile/:id" element={<ProfileDetail />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
-
-export default App

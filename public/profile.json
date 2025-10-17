@@ -1,0 +1,10 @@
+[
+  { "id": 101, "name": "Ava Moore", "email": "ava@example.com", "title": "Frontend Engineer", "description": "UI systems", "imageUrl": "/vite.svg" },
+  { "id": 102, "name": "Liam Patel", "email": "liam@example.com", "title": "Backend Engineer", "description": "APIs and services", "imageUrl": "/vite.svg" },
+  { "id": 103, "name": "Noah Lee", "email": "noah@example.com", "title": "Product Manager", "description": "Roadmaps and delivery", "imageUrl": "/vite.svg" },
+  { "id": 104, "name": "Emma Davis", "email": "emma@example.com", "title": "Frontend Engineer", "description": "Design systems", "imageUrl": "/vite.svg" },
+  { "id": 105, "name": "Mia Johnson", "email": "mia@example.com", "title": "Data Scientist", "description": "ML models", "imageUrl": "/vite.svg" },
+  { "id": 106, "name": "Ethan Chen", "email": "ethan@example.com", "title": "Backend Engineer", "description": "Databases", "imageUrl": "/vite.svg" },
+  { "id": 107, "name": "Olivia Brown", "email": "olivia@example.com", "title": "Designer", "description": "UX research", "imageUrl": "/vite.svg" },
+  { "id": 108, "name": "Sofia Garcia", "email": "sofia@example.com", "title": "Product Manager", "description": "Experiments", "imageUrl": "/vite.svg" }
+]
